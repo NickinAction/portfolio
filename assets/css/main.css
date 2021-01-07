@@ -15,43 +15,72 @@ body {
     padding: 0;
     text-transform: lowercase;
 }
-
-/* Header */
+/* ------------------- */
+/*        Header        /
+/* ------------------- */
 
 header {
-    background-color:#606060;
+    color:CCD6F6;
+    background-color:#24364B;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0.4rem 1.5rem;
+    box-shadow: -1px 4px 11px 1px rgba(0,0,0,0.65);
+}
+
+header, a:link, a:visited {
+    color: #CCD6F6;
 }
 
 .logo {
     font-weight: 400;
-    margin: 0;
+    margin: auto;
+    margin-left: 0;
+    font-size: 2rem;
 }
 
 .navigation {
-    margin: 0;
-    padding: 0;
+    margin: 0 auto;
+    margin-right: 0;
+    display: flex;
+    justify-content: space-between;
     list-style: none;
-    height: 100%;
+    padding: 0;
 }
+
 
 .navigation > li {
     display: inline;
+    margin: auto;
+    height: 100%;
+
 }
 
 .navigation > li > a {
     text-decoration: none;
     font-weight: 400;
     font-size: 1.2rem;
-    color: rgb(235, 235, 235);
-    padding: 0 1.1rem;
+    padding: 0 1.1em;
+    height: 100%;
 }
 
 .navigation > li > a:hover,
 .navigation > li > a:focus {
     color: rgb(192, 192, 192);
     transition: 0.3s;
+}
+
+/* ----------------------*/
+/*        Projects       */
+/* ----------------------*/
+
+.projects-section {
+    border: 1px solid black;
+    width: 100%;
+    padding: 1rem;
+}
+
+.projects-right {
+    
 }
