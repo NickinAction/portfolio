@@ -1,10 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
 
 * {
     box-sizing: border-box;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -13,20 +17,29 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
-    text-transform: lowercase;
+    /* text-transform: lowercase; */
 }
 /* ------------------- */
 /*        Header        /
 /* ------------------- */
 
+main {
+    
+    background-color: #0A192F; 
+    color: floralwhite; 
+    
+}
+
+/* header box */
 header {
     color:CCD6F6;
-    background-color:#24364B;
+    background-color:#112240;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0.4rem 1.5rem;
     box-shadow: -1px 4px 11px 1px rgba(0,0,0,0.65);
+    text-transform: lowercase;
 }
 
 header, a:link, a:visited {
@@ -54,7 +67,6 @@ header, a:link, a:visited {
     display: inline;
     margin: auto;
     height: 100%;
-
 }
 
 .navigation > li > a {
@@ -75,12 +87,182 @@ header, a:link, a:visited {
 /*        Projects       */
 /* ----------------------*/
 
-.projects-section {
-    border: 1px solid black;
-    width: 100%;
-    padding: 1rem;
+/* the site wrapper covers everything with a big padding and allows for better resizing */
+.site-wrapper {
+    padding: 1rem 150px;
+    max-width: 102rem;
+    margin: 0 auto;
 }
 
-.projects-right {
-    
+/* wrappper for the projects section */
+
+.projects-section {
+    margin: 0 auto;
+    padding: 100px 0;
+    max-width: 1000px;
 }
+
+
+/* global project font and color 8*/
+
+.project * {
+    color: #ccd6f6;
+    font-family: 'Open Sans';
+}
+
+/* single project, just styles, no left/right orientation */
+
+.project {
+     /* border: 1px solid black;  */
+     margin-bottom: 100px;
+     display: flex;
+     justify-content: space-between;
+     flex-direction: row;
+}
+
+/* alignments of picture/description */
+
+.alignright project-image {
+    order: 1;
+}
+
+.alignright .project-content {
+    order: 2;
+}
+
+.alignleft .project-image {
+    order: 2;
+}
+
+.alignleft .project-content {
+    order: 1;
+}
+
+/* the image of the project, div*/
+
+.project-image { 
+    margin: auto;
+    margin-left: 0;
+}
+
+
+
+.project-image > a > img {
+    max-width: 100%;
+    border-radius: 4px;
+    max-height: 400px;
+}
+
+/* defines the box shadow and transition for the image itself */
+.project-image > a > img{
+    box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+}
+
+.project-image > a :hover, 
+.project-image > a :focus {
+    box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 1);
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+}
+
+
+.project-content {
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+}
+
+.alignright > .project-content {
+    margin-left: 15px;
+    margin-right: 0;
+}
+
+.alignleft > .project-content {
+    margin-right: 15px;
+    margin-left: 0;
+}
+
+
+/* -----------------------------*/
+/*        Project Content       */
+/* -----------------------------*/
+
+/* title of the project */
+
+.project-title {
+    font-size: 1.5em;
+    text-decoration: underline;
+    color: #ccd6f6;
+} 
+
+/* description of the project + transition animation on hover*/
+
+.project-description {
+    padding: 25px; 
+    background-color: #112240;
+    color: white;
+    border-radius: 4px;
+    max-width: 340px;
+    box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+}
+
+.project-description:hover {
+    box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 1);
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1); 
+} 
+
+/* languages section */
+
+.languages {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+
+.alignright .languages {
+    flex-direction: row-reverse;
+}
+
+.alignleft .languages {
+    flex-direction: row;
+}
+
+/* list items for languages */
+
+.languages > li{
+    font-family: 'Roboto Mono', monospace;
+}
+
+.alignright .languages > li {
+    margin-left: 15px;
+}
+
+.alignleft .languages > li {
+    margin-right: 15px;
+}
+
+
+
+.links { 
+    display: flex;
+    justify-content: flex-start;
+}
+
+.alignright .links {
+    flex-direction: row-reverse;
+}
+
+.alignleft .links {
+    flex-direction: row;
+}
+
+
+.links > svg {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+}
+
+
+
+
