@@ -1,6 +1,4 @@
 # Personal Website
-Work in progress personal website
+(very) work in progress personal website
 
-[nikitagoncharov.com](https://www.nikitagoncharov.com/)
-
-no i didn't use a template. I know it looks like I did but trust me I did not. 
+[nikitagoncharov.com](https://www.nikitagoncharov.com/
